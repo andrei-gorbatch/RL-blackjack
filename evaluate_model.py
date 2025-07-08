@@ -6,7 +6,7 @@ import argparse
 import os
 
 # Import the necessary classes from the training script
-from train_rl import BlackjackEnvironment, BlackjackDQNAgent
+from blackjack_rl_extra_inputs import BlackjackEnvironment, BlackjackDQNAgent
 
 class BlackjackEvaluator:
     """Evaluator for trained blackjack DQN models."""
@@ -124,7 +124,7 @@ class BlackjackEvaluator:
 def main():
     """Main evaluation function."""
     parser = argparse.ArgumentParser(description='Evaluate trained blackjack DQN model')
-    parser.add_argument('--model', type=str, default='models/blackjack_dqn_model_20250707_162810.pth',
+    parser.add_argument('--model', type=str, default='models/blackjack_dqn_model_20250707_191652.pth',
                         help='Path to trained model file')
     parser.add_argument('--games', type=int, default=10000,
                         help='Number of games to evaluate')
