@@ -19,12 +19,36 @@ python blackjack.py
 python blackjack.py auto
 ```
 
-#### Programmatic Usage
-```python
-from blackjack import run_automated_game
 
-# Run single automated game
-result = run_automated_game()
-print(f"Game result: {result}")
-# Returns: 1.0 (AI win), 0.0 (dealer win), 0.5 (tie)
+## blackjack_rl_basic.py
+
+### Features:
+- **Training**: Trains a RL (Deep Q-Network) to play blackjack, provided basic information: player total value, Ace, dealer visible card. Model saved to models/ folder.
+- **Evaluation**: Automated evaluation run every N steps, graph saved in graphs/ folder. Runs evaluation at the end of the script as well.
+
+### Usage
+```bash
+python blackjack_rl_basic.py
+```
+
+## blackjack_rl_extra_inputs.py
+
+### Features:
+- **Training**: Trains a RL (Deep Q-Network) to play blackjack, provided basic information as above, as well as information that can be used for card counting.
+- **Evaluation**: Automated evaluation run every N steps, graph saved in graphs/ folder. Runs evaluation at the end of the script as well.
+
+### Usage
+```bash
+python blackjack_rl_extra_inputs.py
+```
+
+
+## evaluate_model.py
+
+### Features:
+- **Evaluation**: Runs evaluation of a specified model. Saves output to blackjack_evaluation.csv. Allows easy comparison between models.
+
+### Usage
+```bash
+python evaluate_model.py --model "path_to_model"
 ```
