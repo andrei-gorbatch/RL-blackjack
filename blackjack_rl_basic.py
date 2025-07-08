@@ -399,7 +399,7 @@ def main():
     
     # Save the trained model
     torch.save(agent.q_network.state_dict(), f'models/blackjack_dqn_model_{timestamp}.pth')
-    print("\nModel saved as 'blackjack_dqn_model.pth'")
+    print(f"\nModel saved as 'blackjack_dqn_model_{timestamp}.pth'")
     
     print("\nFinal Results:")
     print(f"Final Win Rate: {final_win_rate:.1%}")
