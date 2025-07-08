@@ -135,6 +135,7 @@ class BlackjackGame:
         self.deck = Deck()
         self.player_hand = Hand()
         self.dealer_hand = Hand()
+        self.other_players_hand = Hand()
         self.game_over = False
         self.automated = automated
         self.ai_player = AutomatedPlayer() if automated else None
